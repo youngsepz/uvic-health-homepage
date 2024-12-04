@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import "@radix-ui/themes/styles.css";
+import { Theme, ThemePanel } from "@radix-ui/themes";
+import Appbar from './Appbar.tsx';
 
 createRoot(document.getElementById('root')!).render(
+<>
   <StrictMode>
-    <App />
-  </StrictMode>,
+    <Theme>
+      <Appbar/>
+      <ThemePanel/>
+    </Theme>
+  </StrictMode>
+</>
 )
